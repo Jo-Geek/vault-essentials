@@ -1,0 +1,157 @@
+:root {
+  --canvas-color: #040404;
+  --theme-color-1: #0b0e16;
+  --theme-color-2: #121e2a;
+  --theme-color-3: #1c293c;
+  --theme-color-4: #29405b;
+  --text-color: #f4f4f4;
+  --text-light-color: #64778f;
+  --primary-color-1: #33a9fe;
+  --primary-color-2: #008ff7;
+  --primary-color-3: #0071c3;
+  --success-color-1: #35df91;
+  --success-color-2: #1eb972;
+  --success-color-3: #188d58;
+  --warning-color-1: #fac762;
+  --warning-color-2: #f2ae2c;
+  --warning-color-3: #de9a11;
+  --danger-color-1: #f47960;
+  --danger-color-2: #ea5030;
+  --danger-color-3: #d62f0e;
+  --titlebar-height: 32px;
+}
+
+html, body {
+  font-size: 16px;
+  background-color: var(--canvas-color);
+  color: var(--text-color);
+}
+
+/* Title bar styles */
+
+.title-bar {
+  height: var(--titlebar-height);
+  width: 100vw;
+  background-color: var(--theme-color-2);
+  display: flex;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+.title-bar button {
+  height: 100%;
+  width: 46px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: center center;
+  -webkit-app-region: none;
+}
+
+.title-bar button:hover {
+  background-color: var(--theme-color-1);
+}
+
+.title-bar .title-control .title-close:hover {
+  background-color: var(--danger-color-3);
+}
+
+.title-bar .navbar-toggle {
+  background-image: url(../icon.ico);
+  background-size: 18px;
+}
+
+.title-bar .title-text {
+  color: var(--text-light-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title-bar .title-control {
+  margin-left: auto;
+  height: 100%;
+}
+
+.title-bar .title-control .title-minimize {
+  background-image: url(../assets/icons/minimize_dark.svg)
+}
+
+.title-bar .title-control .title-maximize {
+  background-image: url(../assets/icons/maximize_dark.svg)
+}
+
+.title-bar .title-control .title-maximize.maximized {
+  background-image: url(../assets/icons/restore_dark.svg)
+}
+
+.title-bar .title-control .title-close {
+  background-image: url(../assets/icons/close_dark.svg)
+}
+
+/* Navbar Styles */
+
+.app-container {
+  height: calc(100vh - 32px);
+  display: flex;
+}
+
+nav.app-navbar {
+  flex: 240px 0 0;
+  padding-top: 1.75rem;
+  background-color: var(--theme-color-1);
+}
+
+nav.app-navbar ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+nav.app-navbar .app-navbar-item {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 0 1.25rem;
+  color: var(--text-light-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav.app-navbar .app-navbar-item:hover {
+  background-color: var(--canvas-color);
+}
+
+nav.app-navbar .app-navbar-item:active {
+  color: var(--text-color);
+}
+
+nav.app-navbar .app-navbar-item.active {
+  color: var(--primary-color-1);
+  background-color: var(--canvas-color);
+}
+
+main {
+  flex: calc(100vw - 240px) 0 0;
+  padding: 1.5rem;
+  height: calc(100vh - var(--titlebar-height));
+  overflow-y: auto;
+}
+
+main::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #000;
+}
+
+main::-webkit-scrollbar, textarea::-webkit-scrollbar {
+  width: 6px;
+  background-color: #000;
+}
+
+main::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: var(--theme-color-4);
+}

@@ -1,0 +1,48 @@
+.list-container .card {
+  height: 78px;
+}
+
+.list-container .card.editing {
+  height: 115px;
+}
+
+.sensitive-info .form-control, .sensitive-info .form-control:focus, .sensitive-info .form-control:active {
+  padding: 0.15rem 0;
+  box-shadow: none !important;
+  opacity: 0.5;
+  transition: all.3s ease;
+}
+
+.controls button.btn-show-info {
+  color: var(--success-color-2);
+}
+
+.controls button.btn-show-info:hover {
+  color: var(--success-color-1);
+}
+
+.controls button.btn-hide-info {
+  color: var(--warning-color-2);
+}
+
+.controls button.btn-hide-info:hover {
+  color: var(--warning-color-1);
+}
+
+.controls button.btn-copy-info {
+  color: var(--primary-color-2);
+}
+
+.controls button.btn-copy-info:hover {
+  color: var(--primary-color-1);
+}
+
+.controls button.btn-show-info, .list-container .card.shown .controls button.btn-hide-info {
+  display: inline-block;
+}
+
+.list-container .card.editing .sensitive-info .form-control, .list-container .card.editing .sensitive-info .form-control:focus, .list-container .card.editing .sensitive-info .form-control:active {
+  padding: .375rem .75rem;
+  opacity: 1;
+  transition: none;
+}

@@ -1,0 +1,16 @@
+.login-wrapper {
+  flex: 100% 1 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.login-panel h4 {
+  font-weight: 300;
+}
+
+.login-panel .form-control {
+  border-bottom: 1px solid var(--theme-color-3);
+  border-radius: 0;
+  box-shadow: none !important;
+}

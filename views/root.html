@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fontawesome CSS -->
+  <link href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- App CSS -->
+  <link href="../styles/common.css" rel="stylesheet" />
+  <link href="../styles/root.css" rel="stylesheet" />
+
+  <title>Vault Essentials</title>
+</head>
+
+<body>
+  <header class="title-bar">
+    <button class="app-btn navbar-toggle" tabindex="-1">
+    </button>
+    <span class="title-text" id="appTitle">
+      Vault Essentials
+    </span>
+    <div class="title-control">
+      <button class="app-btn title-minimize" id="minimizeAppButton" tabindex="-1" title="Minimize"></button>
+      <button class="app-btn title-maximize" id="maximizeRestoreAppButton" tabindex="-1" title="Maximize"></button>
+      <button class="app-btn title-close" id="closeAppButton" tabindex="-1" title="Close"></button>
+    </div>
+  </header>
+
+  <div class="app-container">
+
+    <div id="appLogin" class="login-wrapper">
+
+    </div>
+
+    <div id="appHome">
+      <nav class="app-navbar">
+        <ul>
+          <li>
+            <a class="app-navbar-item" id="passwordsAppMenu">
+              <i class="fas fa-key fa-fw me-1"></i>
+              Passwords
+            </a>
+          </li>
+          <li>
+            <a class="app-navbar-item" id="notesAppMenu">
+              <i class="fas fa-sticky-note fa-fw me-1"></i>
+              Notes
+            </a>
+          </li>
+          <li>
+            <a class="app-navbar-item" id="cardsAppMenu">
+              <i class="fas fa-credit-card fa-fw me-1"></i>
+              Cards
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main id="workspace">
+        <!-- This is where modules will be loaded -->
+      </main>
+    </div>
+  </div>
+
+  <style id="workspaceStyle"></style>
+  <script src="../controllers/root.js"></script>
+
+</body>
+
+</html>

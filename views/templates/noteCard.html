@@ -1,0 +1,29 @@
+<article class="card shadow" id="{{id}}">
+  <div class="card-body">
+
+    <label class="card-subtitle view-control" data-field="content">{{content}}</label>
+    <textarea class="form-control form-control-sm edit-control mt-4" name="content"
+      placeholder="Content" rows="4">{{content}}</textarea>
+
+    <div class="controls ml-auto">
+      <button class="app-btn btn-edit-info view-control modify-trigger" title="Edit">
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+      <button class="app-btn btn-delete-info view-control modify-trigger" title="Delete">
+        <i class="fas fa-trash"></i>
+      </button>
+      <button class="app-btn btn-save-info edit-control" title="Save">
+        <i class="fas fa-check"></i>
+      </button>
+      <button class="app-btn btn-cancel-info edit-control" title="Cancel">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="deleting-control">
+      <button class="app-btn btn-undo-delete">
+        <i class="fas fa-undo me-1"></i> UNDO
+      </button>
+    </div>
+  </div>
+</article>
